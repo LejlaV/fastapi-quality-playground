@@ -40,7 +40,10 @@ class TaskResponse(TaskCreate):
 
 @app.get("/")
 def health_check():
-    return {"status": "ok"}
+    x = 1 + 2
+    y = 1 + 2
+    z = 1 + 2
+    return {"status": x + y + z}
 
 @app.post("/tasks")
 def create_task(task: TaskCreate) -> dict:
